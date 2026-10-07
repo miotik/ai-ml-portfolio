@@ -99,7 +99,6 @@ balance
 cash_withdrawal
 card_payment_fee_charged
 transfer_pending
-cash_withdrawal
 ```
 
 ---
@@ -353,8 +352,21 @@ If a customer asks something completely unrelated, the model may still choose on
 
 For example:
 
-```text
-"I want to order a pizza."
+### Request
+
+```json
+{
+  "text": "i want to order a pizza."
+}
+```
+
+### Response
+
+```json
+{
+  "intent": "order",
+  "confidence": 0.4750872552394867
+}
 ```
 
 The model could still return one of the available banking-related intents.
