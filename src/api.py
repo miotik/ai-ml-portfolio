@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from inference import inference
+from .inference import inference
 
 # --------------------
 # FastAPI application
