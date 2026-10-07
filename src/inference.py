@@ -51,14 +51,16 @@ def inference(text):
 #==================
 #Test inference
 #==================
+if __name__ == "__main__":
 
-while True:
-    text=input('Enter customer message:')
-    if text.lower()=='exit':
-        print('exiting....')
-        break
-    label,confidence=inference(text)
-    print('Intent:',label)
-    print(f'Confidence: {confidence *100:.2f}%')
-    print()
-    
+    while True:
+        text=input('Enter customer message:')
+        if text.lower()=='exit':
+            print('exiting....')
+            break
+
+        label,confidence=inference(text)
+
+        print('Intent:',label)
+        print(f'Confidence: {confidence *100:.2f}%')
+        print()
